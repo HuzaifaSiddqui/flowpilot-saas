@@ -1,0 +1,21 @@
+# Minimal local config — run `supabase init` to regenerate a full one if you prefer.
+project_id = "flowpilot-saas"
+
+[api]
+port = 54321
+schemas = ["public", "graphql_public"]   # NOTE: the "private" schema is intentionally NOT exposed
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/dashboard", "http://localhost:5173/reset-password"]
+enable_signup = true
+
+[auth.email]
+enable_confirmations = true
+
+[functions.stripe-webhook]
+verify_jwt = false   # Stripe cannot send a Supabase JWT; authenticity is proven by the Stripe signature instead

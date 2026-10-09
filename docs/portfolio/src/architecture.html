@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.box{position:absolute;background:#fff;border:1.5px solid #e7e5e4;border-radius:18px;padding:22px 26px;box-shadow:0 2px 6px rgba(12,10,9,.05)}
+.box b{display:block;font-size:26px;font-weight:600}.box span{display:block;font-size:17px;color:#78716c;margin-top:6px;line-height:1.4}
+.dark{background:#0c0a09;color:#fff;border-color:#0c0a09}.dark span{color:#a8a29e}
+.acc{background:#eef2ff;border-color:#c7d2fe}
+svg{position:absolute;left:0;top:0}
+</style><body>
+<h1 style="position:absolute;left:80px;top:50px;font-size:46px">Architecture: trust nothing from the browser</h1>
+<svg width="1600" height="900" fill="none" stroke="#a8a29e" stroke-width="2.5"><defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a8a29e" stroke="none"/></marker></defs>
+<path d="M460 275H560" marker-end="url(#a)"/><path d="M940 275H1040" marker-end="url(#a)"/>
+<path d="M270 340V470" marker-end="url(#a)"/><path d="M460 545H560" marker-end="url(#a)"/><path d="M940 545H1040" marker-end="url(#a)"/>
+<path d="M1230 470V340" marker-end="url(#a)"/></svg>
+<div class="box" style="left:80px;top:200px;width:380px;height:140px"><b>React + TypeScript</b><span>Tailwind · TanStack Query · Zod · public anon key only</span></div>
+<div class="box acc" style="left:560px;top:200px;width:380px;height:140px"><b>Supabase Auth + API</b><span>JWT on every request · email verification · password reset</span></div>
+<div class="box dark" style="left:1040px;top:200px;width:380px;height:140px"><b>Postgres + RLS</b><span>Tenant isolation · composite FKs · role RPCs · plan-limit triggers</span></div>
+<div class="box" style="left:80px;top:470px;width:380px;height:150px"><b>Edge Functions</b><span>create-checkout · billing-portal · owner only · server-chosen price</span></div>
+<div class="box" style="left:560px;top:470px;width:380px;height:150px"><b>Stripe</b><span>Checkout · Customer Portal · subscription events</span></div>
+<div class="box" style="left:1040px;top:470px;width:380px;height:150px"><b>stripe-webhook</b><span>Signature verified · idempotent · re-fetches subscription</span></div>
+<div class="box" style="left:80px;top:700px;width:1340px;height:110px;padding:20px 26px"><b style="font-size:22px">CI · GitHub Actions</b><span>typecheck → lint → 107 unit + real-Postgres RLS tests → build → 17 Playwright E2E · Vercel / Netlify SPA config included</span></div>
